@@ -180,32 +180,27 @@
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-
-      <!-- Caption Above Image -->
-      <div style="margin-bottom: 12px;">
-        <p style="font-weight: bold; text-align: center; margin-bottom: 6px;">
-          Mammo-SAE Framework.
-        </p>
-        <p style="text-align: justify; max-width: 900px; margin: 0 auto; font-size: 0.95em;">
-          The SAE is first trained on patch-level CLIP features 
-          <em><strong>x<sub>j</sub> ∈ ℝ<sup>d</sup></strong></em> 
-          at any given layer, projecting them into a high-dimensional, interpretable sparse latent space 
-          <em><strong>z ∈ ℝ<sup>h</sup></strong></em>, and decoding them back for reconstruction. Once trained, the SAE is used to analyze which latent neurons are activated and what semantic information they encode. We also perform targeted interventions in the latent neuron space to assess their influence on downstream label prediction. We observe the learned latents capture diverse regions such as <em>nipple regions, mass regions</em>, and background areas. Red boxes indicate ground-truth mass localization.
-        </p>
-      </div>
+    <div class="hero-body" style="text-align: center;">
 
       <!-- Image -->
-      <div style="text-align: center;">
-        <img src="./images/mammosae.png" 
-             alt="Mammo-SAE Framework" 
-             style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
-      </div>
+      <img src="./images/mammosae.png" 
+           alt="Mammo-SAE Framework" 
+           style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
+
+      <!-- Caption Below Image -->
+      <p style="text-align: justify; margin-top: 12px; font-size: 0.95em; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <strong>Mammo-SAE Framework.</strong> The SAE is first trained on patch-level CLIP features 
+        <em><strong>x<sub>j</sub> ∈ ℝ<sup>d</sup></strong></em> at any given layer, projecting them into a high-dimensional, 
+        interpretable sparse latent space <em><strong>z ∈ ℝ<sup>h</sup></strong></em>, and decoding them back for reconstruction. 
+        Once trained, the SAE is used to analyze which latent neurons are activated and what semantic information they encode. 
+        We also perform targeted interventions in the latent neuron space to assess their influence on downstream label prediction. 
+        We observe the learned latents capture diverse regions such as <em>nipple regions, mass regions</em>, and background areas. 
+        Red boxes indicate ground-truth mass localization.
+      </p>
 
     </div>
   </div>
 </section>
-
 
 
 
