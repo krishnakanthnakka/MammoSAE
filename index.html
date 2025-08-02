@@ -205,19 +205,25 @@
 
 
 
-  <section class="section"  style="background-color:#efeff081">
+<section class="section" style="background-color:#efeff081">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
+    <!-- Highlights -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
-        <h2 class="title is-3">🔥Highlights</h2>
+        <h2 class="title is-3">🔥 Highlights</h2>
         <div class="content has-text-justified">
           <ol type="1">
-            <li><b>Mammo-SAE Introduction</b>. </li>
-              <br>
-            <li><b>Mammo-SAE Framework</b>.  </li>
-              <br>
-            <li><b>Extensive Evaluation</b>.  </li>
+            <li>
+              <b>Mammo-SAE Introduction.</b> We propose <code>Mammo-SAE</code>, a sparse autoencoder trained on visual features from Mammo-CLIP—a vision-language model pretrained on mammogram image–report pairs. Mammo-SAE aims to enhance interpretability in breast imaging by learning latent neurons that correspond to clinical concepts. This approach provides neuron-level insight beyond conventional post-hoc explanations.
+            </li>
+            <br>
+            <li>
+              <b>Mammo-SAE Framework.</b> Our framework projects patch-level CLIP features into a high-dimensional sparse latent space, enabling reconstruction and interpretability. We identify monosemantic latent neurons whose activations align with meaningful breast cancer features such as masses and calcifications. We also perform targeted interventions to test how these neurons affect label prediction.
+            </li>
+            <br>
+            <li>
+              <b>Extensive Evaluation.</b> We visualize spatial activations of latent neurons, showing that they frequently match clinical regions of interest. Our experiments reveal the presence of confounding factors influencing model decisions. Furthermore, finetuning Mammo-CLIP leads to more distinct latent neuron clusters and improved interpretability and performance.
+            </li>
           </ol>
         </div>
       </div>
