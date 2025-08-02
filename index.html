@@ -231,7 +231,6 @@
   </div>
 </section>
 
-
 <section class="section" style="background-color: #f7f7f7;">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -241,18 +240,16 @@
 
           <p><strong>Step 1: Feature Extraction</strong></p>
           <p>
-            Given an input image \( I \), we extract local features from a pretrained Mammo-CLIP model at a specific layer \( l \). Each spatial position \( j \) in the feature map yields a vector \( \mathbf{x}_l^j \in \mathbb{R}^d \), where \( d \) is the feature dimension and \( N_l = H_l \times W_l \) is the number of spatial locations.
+            Given an input image <strong>I</strong>, we extract local features from a pretrained Mammo-CLIP model at a specific layer <strong>l</strong>. Each spatial position <strong>j</strong> in the feature map yields a vector <strong>x<sub>l</sub><sup>j</sup> ∈ ℝ<sup>d</sup></strong>, where <strong>d</strong> is the feature dimension and <strong>N<sub>l</sub> = H<sub>l</sub> × W<sub>l</sub></strong> is the number of spatial locations.
           </p>
 
           <p><strong>Step 2: Sparse Autoencoder Training</strong></p>
           <p>
-            The extracted feature \( \mathbf{x}_l^j \) is encoded using weight matrix \( W_{\mathrm{enc}} \in \mathbb{R}^{d \times h} \), passed through a ReLU nonlinearity \( \phi(\cdot) \), and decoded using \( W_{\mathrm{dec}} \in \mathbb{R}^{h \times d} \). The objective combines a reconstruction loss and sparsity penalty:
+            The extracted feature <strong>x<sub>l</sub><sup>j</sup></strong> is encoded using weight matrix <strong>W<sub>enc</sub> ∈ ℝ<sup>d×h</sup></strong>, passed through a ReLU nonlinearity, and decoded using <strong>W<sub>dec</sub> ∈ ℝ<sup>h×d</sup></strong>. The training objective combines reconstruction and sparsity:
           </p>
 
-          <p style="text-align: center;">
-            \[
-            \mathcal{L} = \left\| W_{\mathrm{dec}} \, \phi(W_{\mathrm{enc}} \mathbf{x}^j) - \mathbf{x}^j \right\|_2^2 + \lambda \left\| \phi(W_{\mathrm{enc}} \mathbf{x}^j) \right\|_1
-            \]
+          <p style="text-align: center; font-family: monospace;">
+            L = ‖W<sub>dec</sub> · ReLU(W<sub>enc</sub> · x<sup>j</sup>) – x<sup>j</sup>‖<sup>2</sup><sub>2</sub> + λ‖ReLU(W<sub>enc</sub> · x<sup>j</sup>)‖<sub>1</sub>
           </p>
 
           <p>
@@ -261,51 +258,45 @@
 
           <p><strong>Step 3: Identifying Concept-Neurons</strong></p>
           <p>
-            After training, we compute the class-wise mean latent activation \( \bar{\mathbf{z}}^{(c)} \in \mathbb{R}^h \) over all images \( \mathbf{x} \in \mathcal{D}_c \) labeled with class \( c \in \{0, 1\} \):
+            After training, we compute the class-wise mean latent activation <strong>z̄<sup>(c)</sup> ∈ ℝ<sup>h</sup></strong> over all examples in class <strong>c ∈ {0, 1}</strong>:
           </p>
 
-          <p style="text-align: center;">
-            \[
-            \bar{\mathbf{z}}^{(c)} = \frac{1}{|\mathcal{D}_c| \cdot N_l} \sum_{\mathbf{x} \in \mathcal{D}_c} \sum_{j=1}^{N_l} \phi\left(W_{\mathrm{enc}}\, \mathbf{x}^j\right)
-            \]
+          <p style="text-align: center; font-family: monospace;">
+            z̄<sup>(c)</sup> = (1 / |D<sub>c</sub>| · N<sub>l</sub>) ∑<sub>x ∈ D<sub>c</sub></sub> ∑<sub>j=1</sub><sup>N<sub>l</sub></sup> ReLU(W<sub>enc</sub> · x<sup>j</sup>)
           </p>
 
           <p>
-            Each latent neuron \( t \) is assigned a score \( s_t^{(c)} = \bar{z}_t^{(c)} \). Neurons are ranked by \( s_t^{(c)} \), and top-scoring ones are considered concept-aligned.
+            Each latent neuron <strong>t</strong> is scored by its activation <strong>s<sub>t</sub><sup>(c)</sup> = z̄<sub>t</sub><sup>(c)</sup></strong>, and top-scoring neurons are considered concept-aligned.
           </p>
 
           <p><strong>Step 4: Visualization and Semantic Probing</strong></p>
           <p>
-            We visualize the input patches that most strongly activate selected neurons. This reveals whether the neuron focuses on meaningful clinical patterns (e.g., masses, calcifications) or spurious areas.
+            We visualize input patches that strongly activate each latent neuron. This reveals whether the neuron focuses on meaningful clinical patterns (e.g., masses, calcifications) or irrelevant areas.
           </p>
 
           <p><strong>Step 5: Latent Interventions</strong></p>
           <p>
-            We perform two types of latent interventions on the encoded activation \( \mathbf{z} = \phi(W_{\mathrm{enc}}\, \mathbf{x}^j) \):
+            We intervene on the latent activations <strong>z = ReLU(W<sub>enc</sub> · x<sup>j</sup>)</strong> by either retaining or suppressing specific neurons:
           </p>
 
           <ul>
             <li>
-              <strong>Top-\(k\) Activated:</strong> Retain only the top-\(k\) concept-relevant neuron activations:
-              \[
-              \mathbf{z}' = \mathbf{z} \odot \mathbf{m}, \quad m_i =
-              \begin{cases}
-              1, & \text{if } i \in \mathcal{T}_k^{(0)} \cup \mathcal{T}_k^{(1)} \\
-              0, & \text{otherwise}
-              \end{cases}
-              \]
+              <strong>Top-k Activated:</strong> Keep only the top-k neuron activations:
+              <p style="font-family: monospace;">
+                z′ = z ⊙ m, &nbsp; where &nbsp; m<sub>i</sub> = 1 if i ∈ T<sub>k</sub><sup>(0)</sup> ∪ T<sub>k</sub><sup>(1)</sup>, else 0
+              </p>
             </li>
             <br>
             <li>
-              <strong>Top-\(k\) Deactivated:</strong> Suppress the top-\(k\) neurons and keep all others:
-              \[
-              \mathbf{z}' = \mathbf{z} \odot (1 - \mathbf{m})
-              \]
+              <strong>Top-k Deactivated:</strong> Suppress the top-k neurons:
+              <p style="font-family: monospace;">
+                z′ = z ⊙ (1 – m)
+              </p>
             </li>
           </ul>
 
           <p>
-            We evaluate the model’s prediction change before and after intervention to measure the functional importance of the selected neurons.
+            By comparing the model's outputs before and after intervention, we assess whether the top neurons carry meaningful information or reflect confounding artifacts.
           </p>
 
         </div>
@@ -313,6 +304,7 @@
     </div>
   </div>
 </section>
+
 
 
 <section class="section">
