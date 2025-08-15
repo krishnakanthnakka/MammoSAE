@@ -343,20 +343,31 @@ To ensure consistency and reduce computational overhead, we use a <strong>shared
 </section>
 
 
-
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+
+      <!-- Subsection heading -->
+      <h3 class="title is-4">Group Interventions on Latent Neurons</h3>
+
+      <!-- Short paragraph -->
+      <p class="content has-text-justified" style="font-size: 1.05em;">
+        We investigate the role of class-level latent neurons by selectively activating or deactivating
+        the most influential ones. This helps us understand how specific neuron groups contribute to
+        downstream predictions and model interpretability.
+      </p>
+
+      <!-- Figure -->
       <figure style="text-align: center;">
         <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-          
+
           <!-- First subfigure -->
           <figure style="margin: 0;">
             <img src="./images/media/topk_on_combined.png" 
                  alt="Suspicious Calcification" 
                  style="width: 100%; max-width: 350px; border: 1px solid #ccc; border-radius: 8px;">
             <figcaption style="margin-top: 6px; font-size: 0.9em;">
-              (a) Topk-k class-level latent neurons Activated
+              (a) Top-k class-level latent neurons activated
             </figcaption>
           </figure>
 
@@ -366,20 +377,22 @@ To ensure consistency and reduce computational overhead, we use a <strong>shared
                  alt="Benign Mass" 
                  style="width: 100%; max-width: 350px; border: 1px solid #ccc; border-radius: 8px;">
             <figcaption style="margin-top: 6px; font-size: 0.9em;">
-              (b) Topk-k class-level latent neurons Deactivated
+              (b) Top-k class-level latent neurons deactivated
             </figcaption>
           </figure>
 
         </div>
 
         <!-- Main figure caption -->
-        <figcaption style="margin-top: 15px; font-weight: bold; font-size: 1em;">
-        Figure: Group interventions on class-level latent neurons. Left: Top-k activated intervention—only the top-k class-specific neurons are retained, and all others are zeroed out. Right: Top-k deactivated intervention—the top-k neurons are zeroed out while the rest remain unchanged. We observe that as few as 10 neurons can significantly affect downstream predictions, highlighting their relevance.
+        <figcaption style="margin-top: 15px; font-size: 1em;">
+          <b>Figure:</b> Group interventions on class-level latent neurons. Left: Top-k activated intervention—only the top-k class-specific neurons are retained, and all others are zeroed out. Right: Top-k deactivated intervention—the top-k neurons are zeroed out while the rest remain unchanged. We observe that as few as 10 neurons can significantly affect downstream predictions, highlighting their relevance.
         </figcaption>
       </figure>
+
     </div>
   </div>
 </section>
+
 
 
 
