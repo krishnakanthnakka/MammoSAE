@@ -311,29 +311,46 @@
 
 
 <section class="section">
-<div class="container is-max-desktop">
-<div class="columns is-centered">
-<div class="column is-full">
-<h2 class="title is-3 has-text-centered"> 📊 Experiments</h2>
-<div class="content has-text-justified" style="font-size: 1.05em;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 has-text-centered">📊 Experiments</h2>
+        <div class="content has-text-justified" style="font-size: 1.05em;">
 
-<p><strong>Dataset.</strong> We use the VinDr-Mammo dataset&nbsp;
-<a href="https://vindr.ai/datasets/vindr-mammo" target="_blank" style="text-decoration: underline;">
-[Nguyen et al., 2023]
-</a>,
-which contains approximately 20,000 full-field digital mammograms from 5,000 patients. The dataset includes expert annotations for breast-specific findings such as <em>mass</em> and <em>suspicious calcification</em>.
-</p>
+          <p>
+            <em>Dataset.</em> We use the VinDr-Mammo dataset 
+            <a href="https://vindr.ai/datasets/vindr-mammo" target="_blank" style="text-decoration: underline;">
+              [Nguyen et&nbsp;al., 2023]
+            </a>, which contains approximately 20,000 full-field digital mammograms from 5,000 patients. 
+            The dataset includes expert annotations for breast-specific findings such as <em>mass</em> and 
+            <em>suspicious calcification</em>.
+          </p>
 
-<p><strong>SAE Training.</strong> We train a single Sparse Autoencoder (SAE) on patch-level features extracted from the <strong>fine-tuned Mammo-CLIP</strong> model using the Vision-SAEs library. Specifically, we extract activations from the final layer of the <strong>EfficientNet-B5</strong> backbone trained on the <em>suspicious calcification</em> classification task.
-</p>
+          <p>
+            <em>SAE Training.</em> A single Sparse Autoencoder (SAE) is trained on patch-level features extracted 
+            from the fine-tuned Mammo-CLIP model using the Vision-SAEs library. Activations are taken from the final 
+            layer of the EfficientNet-B5 backbone trained on the <em>suspicious calcification</em> classification task.
+          </p>
 
-<p>
-To ensure consistency and reduce computational overhead, we use a <strong>shared SAE</strong> across all experiments rather than training separate SAEs per model. This design ensures a common latent space and facilitates direct comparison across settings.
-</p>
+          <p>
+            To ensure consistency and reduce computational overhead, a shared SAE is used across all experiments 
+            rather than training separate SAEs per model. This design enforces a common latent space and allows 
+            direct comparison across settings.
+          </p>
 
-<p>
-<strong>Hyperparameters.</strong> Input feature dimension is set to <strong>d = 2048</strong>, and we use an expansion factor of 8, resulting in a latent dimension <strong>h = 16,384</strong>. The SAE is trained for 200 epochs with a learning rate of <strong>3 × 10<sup>−4</sup></strong>, sparsity penalty <strong>λ = 3 × 10<sup>−5</sup></strong>, and a batch size of <strong>4096</strong>.
-</p>
+          <p>
+            <em>Hyperparameters.</em> Input feature dimension is set to <code>d = 2048</code>, with an expansion 
+            factor of 8, resulting in a latent dimension <code>h = 16,384</code>. The SAE is trained for 200 epochs 
+            with a learning rate of <code>3 × 10<sup>−4</sup></code>, sparsity penalty 
+            <code>λ = 3 × 10<sup>−5</sup></code>, and a batch size of <code>4096</code>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 </div>
