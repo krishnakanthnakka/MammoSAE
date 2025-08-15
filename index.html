@@ -342,40 +342,39 @@ To ensure consistency and reduce computational overhead, we use a <strong>shared
 </div>
 </section>
 
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
+<section class="hero teaser" style="padding-left: 0; padding-right: 0;">
+  <div class="container is-max-desktop" style="padding-left: 0; padding-right: 0;">
+    <div class="hero-body" style="padding-left: 0; padding-right: 0;">
 
       <!-- Subsection heading -->
-      <h3 class="title is-4">Group Interventions on Latent Neurons</h3>
+      <h3 class="title is-4" style="margin-left: 0;">Group Interventions on Latent Neurons</h3>
 
       <!-- Short paragraph -->
-      <p class="content has-text-justified" style="font-size: 1.05em;">
+      <p class="content has-text-justified" style="font-size: 1.05em; margin-left: 0;">
         We investigate the role of class-level latent neurons by selectively activating or deactivating
         the most influential ones. This helps us understand how specific neuron groups contribute to
         downstream predictions and model interpretability.
       </p>
 
       <!-- Figure -->
-      <figure style="text-align: center;">
-        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+      <figure style="text-align: center; margin-left: 0;">
+        <div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
 
           <!-- First subfigure -->
-          <figure style="margin: 0;">
+          <figure style="margin: 0; flex: 1;">
             <img src="./images/media/topk_on_combined.png" 
                  alt="Suspicious Calcification" 
-                 style="width: 100%; max-width: 350px; border: 1px solid #ccc; border-radius: 8px;">
+                 style="width: 100%; border: 1px solid #ccc; border-radius: 8px;">
             <figcaption style="margin-top: 6px; font-size: 0.9em;">
               (a) Top-k class-level latent neurons activated
             </figcaption>
           </figure>
 
           <!-- Second subfigure -->
-          <figure style="margin: 0;">
+          <figure style="margin: 0; flex: 1;">
             <img src="./images/media/topk_off_combined.png" 
                  alt="Benign Mass" 
-                 style="width: 100%; max-width: 350px; border: 1px solid #ccc; border-radius: 8px;">
+                 style="width: 100%; border: 1px solid #ccc; border-radius: 8px;">
             <figcaption style="margin-top: 6px; font-size: 0.9em;">
               (b) Top-k class-level latent neurons deactivated
             </figcaption>
@@ -392,7 +391,6 @@ To ensure consistency and reduce computational overhead, we use a <strong>shared
     </div>
   </div>
 </section>
-
 
 
 
