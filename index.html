@@ -314,7 +314,7 @@
 <div class="container is-max-desktop">
 <div class="columns is-centered">
 <div class="column is-full">
-<h2 class="title is-3 has-text-centered">🧪 Experimental Setup</h2>
+<h2 class="title is-3 has-text-centered"> 📊 Experiments</h2>
 <div class="content has-text-justified" style="font-size: 1.05em;">
 
 <p><strong>Dataset.</strong> We use the VinDr-Mammo dataset&nbsp;
@@ -366,7 +366,7 @@ To ensure consistency and reduce computational overhead, we use a <strong>shared
                  alt="Benign Mass" 
                  style="width: 100%; max-width: 350px; border: 1px solid #ccc; border-radius: 8px;">
             <figcaption style="margin-top: 6px; font-size: 0.9em;">
-              (a) Topk-k class-level latent neurons Deactivated
+              (b) Topk-k class-level latent neurons Deactivated
             </figcaption>
           </figure>
 
@@ -374,7 +374,7 @@ To ensure consistency and reduce computational overhead, we use a <strong>shared
 
         <!-- Main figure caption -->
         <figcaption style="margin-top: 15px; font-weight: bold; font-size: 1em;">
-          Figure: Group interventions on class-level latent neurons
+        Figure: Group interventions on class-level latent neurons. Left: Top-k activated intervention—only the top-k class-specific neurons are retained, and all others are zeroed out. Right: Top-k deactivated intervention—the top-k neurons are zeroed out while the rest remain unchanged. We observe that as few as 10 neurons can significantly affect downstream predictions, highlighting their relevance.
         </figcaption>
       </figure>
     </div>
