@@ -546,6 +546,43 @@
 
 
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <!-- Subsection heading -->
+      <h3 class="title is-4" style="margin-bottom: 0.5em; text-align: left;">
+        Latent Neuron Separation: Fine-Tuned vs. Pretrained
+      </h3>
+
+      <!-- Introductory sentence -->
+      <p class="content has-text-justified" style="font-size: 1.05em; margin-bottom: 1em;">
+        We observe that the separation between class-wise mean activations becomes 
+        significantly more pronounced in the fine-tuned model, suggesting that 
+        fine-tuning sharpens the latent space to better distinguish the presence 
+        of breast concepts.
+      </p>
+
+      <!-- Caption above image -->
+      <p style="font-size: 1em; color: #555; margin-bottom: 10px; text-align: left;">
+        <b>Figure:</b> Mean latent activation vectors for each class (<em>c</em> = 1 indicates 
+        the presence of the concept) in the pretrained model (left) and fine-tuned model 
+        (right) for the suspicious calcification concept.
+      </p>
+
+      <!-- Image -->
+      <div style="text-align: center;">
+        <img src="./images/media/latent_separation.png" 
+             alt="Latent neuron separation between pretrained and fine-tuned models" 
+             style="max-width: 100%; border-radius: 8px; border: 1px solid #ccc;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
