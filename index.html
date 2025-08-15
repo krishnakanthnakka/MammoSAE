@@ -318,7 +318,7 @@
         <div class="content has-text-justified" style="font-size: 1.05em;">
 
           <p>
-            <em>Dataset.</em> We use the VinDr-Mammo dataset 
+            <b>Dataset.</b> We use the VinDr-Mammo dataset 
             <a href="https://vindr.ai/datasets/vindr-mammo" target="_blank" style="text-decoration: underline;">
               [Nguyen et&nbsp;al., 2023]
             </a>, which contains approximately 20,000 full-field digital mammograms from 5,000 patients. 
@@ -327,7 +327,7 @@
           </p>
 
           <p>
-            <em>SAE Training.</em> A single Sparse Autoencoder (SAE) is trained on patch-level features extracted 
+            <b>SAE Training.</b> A single Sparse Autoencoder (SAE) is trained on patch-level features extracted 
             from the fine-tuned Mammo-CLIP model using the Vision-SAEs library. Activations are taken from the final 
             layer of the EfficientNet-B5 backbone trained on the <em>suspicious calcification</em> classification task.
           </p>
@@ -339,7 +339,7 @@
           </p>
 
           <p>
-            <em>Hyperparameters.</em> Input feature dimension is set to <code>d = 2048</code>, with an expansion 
+            <b>Hyperparameters.</b> Input feature dimension is set to <code>d = 2048</code>, with an expansion 
             factor of 8, resulting in a latent dimension <code>h = 16,384</code>. The SAE is trained for 200 epochs 
             with a learning rate of <code>3 × 10<sup>−4</sup></code>, sparsity penalty 
             <code>λ = 3 × 10<sup>−5</sup></code>, and a batch size of <code>4096</code>.
