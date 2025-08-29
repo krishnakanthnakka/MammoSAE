@@ -234,7 +234,7 @@
   </div>
 </section>
 
-<section class="section" style="background-color: #f9f9f9;">  <!-- #f3f3f3; -->
+<section class="section" style="background-color: #ededed;">  <!-- #f3f3f3; -->
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
@@ -251,9 +251,13 @@
             The extracted feature <strong>x<sub>l</sub><sup>j</sup></strong> is encoded using weight matrix <strong>W<sub>enc</sub> ∈ ℝ<sup>d×h</sup></strong>, passed through a ReLU nonlinearity, and decoded using <strong>W<sub>dec</sub> ∈ ℝ<sup>h×d</sup></strong>. The training objective combines reconstruction and sparsity:
           </p>
 
+          <!--
+
           <p style="text-align: center; font-family: monospace;">
             L = ‖W<sub>dec</sub> · ReLU(W<sub>enc</sub> · x<sup>j</sup>) – x<sup>j</sup>‖<sup>2</sup><sub>2</sub> + λ‖ReLU(W<sub>enc</sub> · x<sup>j</sup>)‖<sub>1</sub>
           </p>
+
+          -->
 
           <p style="text-align:center;">
             <img src="images/equation_1.png" alt="Equation 1" style="max-width:80%; height:auto;">
