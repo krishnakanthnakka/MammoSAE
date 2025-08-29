@@ -234,7 +234,7 @@
   </div>
 </section>
 
-<section class="section" style="background-color: #f9fafb;">  <!-- #f3f3f3; f9fafb ededed-->
+<section class="section" style="background-color: #fdfdfd;">  <!-- #f3f3f3; f9fafb ededed  fdfdfd  -->
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
@@ -272,13 +272,13 @@
             After training, we compute the class-wise mean latent activation <strong>z̄<sup>(c)</sup> ∈ ℝ<sup>h</sup></strong> over all examples in class <strong>c ∈ {0, 1}</strong>:
           </p>
 
-          <p style="text-align: center; font-family: monospace;">
+          <!-- <p style="text-align: center; font-family: monospace;">
             z̄<sup>(c)</sup> = (1 / |D<sub>c</sub>| · N<sub>l</sub>) ∑<sub>x ∈ D<sub>c</sub></sub> ∑<sub>j=1</sub><sup>N<sub>l</sub></sup> ReLU(W<sub>enc</sub> · x<sup>j</sup>)
-          </p>
+          </p> -->
 
           <p style="text-align:center;">
             <img src="images/equation_2.png" alt="Equation 2" style="max-width:80%; height:auto;">
-          </p>
+          </p> 
 
           <p>
             Each latent neuron <strong>t</strong> is scored by its activation <strong>s<sub>t</sub><sup>(c)</sup> = z̄<sub>t</sub><sup>(c)</sup></strong>, and top-scoring neurons are considered concept-aligned.
@@ -297,16 +297,26 @@
           <ul>
             <li>
               <strong>Top-k Activated:</strong> Keep only the top-k neuron activations:
-              <p style="font-family: monospace;">
+              <!-- <p style="font-family: monospace;">
                 z′ = z ⊙ m, &nbsp; where &nbsp; m<sub>i</sub> = 1 if i ∈ T<sub>k</sub><sup>(0)</sup> ∪ T<sub>k</sub><sup>(1)</sup>, else 0
-              </p>
+              </p> -->
+
+              <p style="text-align:center;">
+              <img src="images/equation_3.png" alt="Equation 3" style="max-width:80%; height:auto;">
+             </p>
+
             </li>
             <br>
             <li>
               <strong>Top-k Deactivated:</strong> Suppress the top-k neurons:
-              <p style="font-family: monospace;">
+              <!-- <p style="font-family: monospace;">
                 z′ = z ⊙ (1 – m)
+              </p> -->
+
+              <p style="text-align:center;">
+              <img src="images/equation_4.png" alt="Equation 4" style="max-width:80%; height:auto;">
               </p>
+
             </li>
           </ul>
 
