@@ -1,4 +1,3 @@
-## Mammo-SAE
 
 <h2 align="center"> Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse Autoencoder [Deep Breast Imaging Workshop, MICCAI 2025 🔥]</h2>
 
