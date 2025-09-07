@@ -1,7 +1,27 @@
 ## Mammo-SAE
 
+<h2 align="center"> Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse Autoencoder [Deep Breast Imaging Workshop, MICCAI 2025 🔥]</h2>
 
-### Introduction
+![](https://i.imgur.com/waxVImv.png)
+
+[Krishna Kanth Nakka](https://krishnakanthnakka.github.io/)* 
+
+**Munich, Bavaria, Germany**
+
+<h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
+
+
+
+
+## 📣 Latest Updates
+- **Sep-7-2025**: Initial Code Release
+
+
+## 🔥 Highlights
+
+- Mammo-SAE: 
+
+- 
 
 
 
@@ -59,10 +79,33 @@
 
     ```
 
-### Spatial Alignment b/w Latent Neurons and True Regions
+### Visualization of Latent Neurons
 
-- To compute the spatial alignment of the heatmap with ground-truth regions, please run:
+- To visualize the top-k latent neurons, please run:
 
     ```sh
-    bashs scripts/compute_iou_alignment.sh
+    bashs scripts/visualizations.sh
     ```
+
+
+
+
+
+## 📝 Citation
+
+If you find this paper useful, please consider staring 🌟 this repo and citing 📑 our paper:
+
+```
+
+@article{nakka2025mammo,
+  title={Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse Autoencoders},
+  author={Nakka, Krishna Kanth},
+  journal={arXiv preprint arXiv:2507.15227},
+  year={2025}
+}
+
+
+```
+
+## 🙏 Acknowledgement
+- This project is built upon [Mammo-CLIP]() and [VisionSAE]() codebases. Thank you to both of them for open sourcing their codebases.
