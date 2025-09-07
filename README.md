@@ -107,4 +107,4 @@ If you find this paper useful, please consider staring 🌟 this repo and citing
 ```
 
 ## 🙏 Acknowledgement
-- This project is built upon [Mammo-CLIP]() and [VisionSAE]() codebases. Thank you to both of them for open sourcing their codebases.
+- This project is built upon [Mammo-CLIP](https://arxiv.org/abs/2405.12255) and [VisionSAE]() codebases. Thank you to both of them for open sourcing their codebases.
