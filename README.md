@@ -13,7 +13,7 @@
 
 
 ## 📣 Latest Updates
-- **Sep-7-2025**: Partial Code Release. Working on update remaining parts.
+- **Sep-7-2025**: Partial Code Release. Working to  update remaining parts of the code.
 
 
 ## 🔥 Highlights
