@@ -55,20 +55,31 @@
     ```
 
 - **MammoCLIP:** Download the pretrained MammoCLIP checkpoints from [Hugging Face](https://huggingface.co/shawn24/Mammo-CLIP) and place them in the `Mammo_CLIP_weights/` directory.  
+
 ---
+
 
 ### VinDr Dataset
 
-- We follow similar preprocessing pipeline and scripts from the [Mammo-CLIP](https://github.com/batmanlab/Mammo-CLIP) codebase. Please download all relevant dataset files such as annotations csv file and images. 
+- We follow similar preprocessing pipeline and scripts from the [Mammo-CLIP](https://github.com/batmanlab/Mammo-CLIP) codebase. We already provide the annotations csv file at `datasets/Vindr`. The CSV file is taken from Mammo-CLIP codebase.
 
-- We download the VinDr dataset images from the Kaggle project. Please see [here](https://www.kaggle.com/datasets/shantanughosh/vindr-mammogram-dataset-dicom-to-png) for more details.
+- We download the VinDr dataset images from the Kaggle project. Please see [here](https://www.kaggle.com/datasets/shantanughosh/vindr-mammogram-dataset-dicom-to-png) for more details. Please put the downloaded images to `datasets/Vindr/images`.
+
+- The dataset folder should look like below:
+
+```
+
+```
+
+
+
 
 
 ### Mammo-SAE Generalization
 
-- Our MammoSAE is trained on the local features of the `finetuned suspicious calcification` prediction model. To understand its effectivness in reconstructing other models (such as for different concept or for different training phase like pretrainign), we conduct the below experiment.
+- Our MammoSAE is trained on the local features of the `finetuned:suspicious calcification` prediction model. To understand its effectivness in reconstructing other models (such as for different concept (eg., `mass`) or for different training phase like `pretraining`), we conduct the below experiment.
 
--  We reconstruct the local features at the last layer of the Mammo-CLIP backbone with SAE for different models and concepts,  using
+-  We reconstruct the local features at the last layer of the Mammo-CLIP backbone with SAE for different `models` and `concepts`,  using
 
     ```sh
     bash scripts/eval_with_sae_reconstruction.sh
@@ -79,7 +90,7 @@
 
 - We provide scripts to reproduce Figure 2 using the commands below. 
 
-#### Intervention: Top-k Latent Neurons Activated
+#### Intervention: Top-k Latent Class-level  Neurons Activated
 
 - To launch an intervention that activates only the `top-k` neurons, run:
 
@@ -88,7 +99,7 @@
     ```
 
 
-#### Intervention: Top-k Latent Neurons Deactivated
+#### Intervention: Top-k Class-level Latent Neurons Deactivated
 
 - To launch an intervention that deactivates only the top-k neurons, run:
     ```sh
@@ -129,6 +140,7 @@
 </p>
 
 
+- We visualizaed the latent neurons that have `highest` activated aggregated over all class-level images. Future work could explore better ways to localize neurons positions that are interpretable and important for downstream prediction.
 
 
 
