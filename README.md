@@ -64,7 +64,7 @@
 - We download the VinDr dataset images from the Kaggle project. Please see [here](https://www.kaggle.com/datasets/shantanughosh/vindr-mammogram-dataset-dicom-to-png) for more details.
 
 
-### SAE Generalization
+### Mammo-SAE Generalization
 
 - Our MammoSAE is trained on the local features of the `finetuned suspicious calcification` prediction model. To understand its effectivness in reconstructing other models (such as for different concept or for different training phase like pretrainign), we conduct the below experiment.
 
@@ -75,7 +75,7 @@
     ```
 
 
-### Launch Intervention on SAE Latent Neurons
+### Launch Intervention on Mammo-SAE Latent Neurons
 
 - We provide scripts to reproduce Figure 2 using the commands below. 
 
@@ -95,7 +95,7 @@
     bash scripts/topk_deactivate_latent_neuron_interventions.sh
     ```
 
-### Visualization of Latent Neurons
+### Visualization of Mammo-SAE Latent Neurons
 
 - To visualize the top-k latent neurons, please run:
 
