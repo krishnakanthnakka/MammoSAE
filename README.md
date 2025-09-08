@@ -30,6 +30,7 @@
 
     ```sh
     pip install -r requirments.txt
+    source envs.sh
     ```
 
 ---
