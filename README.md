@@ -35,7 +35,7 @@
 
 ### Checkpoints
 
-- **Sparse Autoencoder (SAE):** Pretrained SAE checkpoints are uploaded to the [Huggingface](https://huggingface.co/KKNakka/MammoSAE).  
+- **Sparse Autoencoder (SAE) Weights:** Pretrained SAE checkpoints are uploaded to the [Huggingface](https://huggingface.co/KKNakka/MammoSAE).  
 
     ```python
 
@@ -67,7 +67,7 @@
     ```
 
 
-### Launch Intervention
+### Launch Intervention on SAE Latent Neurons
 
 - We provide scripts to reproduce Figure 2 using the commands below. 
 
@@ -84,9 +84,7 @@
 
 - To launch an intervention that deactivates only the top-k neurons, run:
     ```sh
-
     bash scripts/topk_deactivate_latent_neuron_interventions.sh
-
     ```
 
 ### Visualization of Latent Neurons
@@ -94,28 +92,21 @@
 - To visualize the top-k latent neurons, please run:
 
     ```sh
-    bashs scripts/visualizations.sh
+    bash scripts/visualizations.sh
     ```
-
-
-
-
 
 ## 📝 Citation
 
-If you find this paper useful, please consider staring 🌟 this repo and citing 📑 our paper:
+If you find this paper or repository useful, please consider staring 🌟 this repo and citing 📑 our paper:
 
 ```
-
 @article{nakka2025mammo,
   title={Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse Autoencoders},
   author={Nakka, Krishna Kanth},
   journal={arXiv preprint arXiv:2507.15227},
   year={2025}
 }
-
-
 ```
 
 ## 🙏 Acknowledgement
-- This project is built upon [Mammo-CLIP](https://arxiv.org/abs/2405.12255) and [VisionSAE]() codebases. Thank you to both of them for open sourcing their codebases.
+- This project is built upon [Mammo-CLIP](https://arxiv.org/abs/2405.12255) and [VisionSAE]() codebases. Thank you to both of them for open sourcing their codebases. 
