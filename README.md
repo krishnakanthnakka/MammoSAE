@@ -106,10 +106,13 @@
 - The visualizations are stored in the `./results/visualizations` folder.  For example, given an image, we plot `top-10` latent neurons corresponding to presence of `suspicious calcification` class is shown below:
 
 <p align="center">
-  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=11097_heatmap.png" width="80"/>
-  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=11097_heatmap.png" width="80"/>
-  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=11097_heatmap.png" width="80"/>
-  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=11097_heatmap.png" width="80"/>
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=13867_heatmap.png" width="80"/>
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=15699_heatmap.png" width="80"/>
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=15892_heatmap.png" width="80"/>
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=15946_heatmap.png" width="80"/>
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=2971_heatmap.png" width="80"/>
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=13093_heatmap.png" width="80"/>
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=2559_heatmap.png" width="80"/>
 </p>
 
 
