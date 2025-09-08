@@ -13,12 +13,12 @@
 
 
 ## 📣 Latest Updates
-- **Sep-7-2025**: Partial Code Release. Working to  update remaining parts of the code.
+- **Sep 7-2025**: Partial Code Release. Working to  update remaining parts of the code.
 
 
 ## 🔥 Highlights
 
-- Mammo-SAE: 
+- Mammo-SAE:  First SAE trained on Mammogram Foundation Model.
 
 - 
 
