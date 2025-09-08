@@ -37,7 +37,7 @@
 
 - **Sparse Autoencoder (SAE):** Pretrained SAE checkpoints are included with this repository.  
 
-    ```sh
+    ```python
 
     # minimal example to download the MammoSAE
     ckpt_path = hf_hub_download(
