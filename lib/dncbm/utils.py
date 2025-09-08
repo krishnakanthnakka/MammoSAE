@@ -9,6 +9,7 @@ from pathlib import Path
 from lib.dncbm.data_utils import probe_classnames
 import os
 import lib.clip
+from huggingface_hub import hf_hub_download
 
 import torch.utils
 
@@ -45,10 +46,17 @@ def get_sae_ckpt(args, autoencoder):
     """
     Loads the SAE checkpoint given configuration in args
     """
+
     # save_dir_ckpt = args.save_dir_sae_ckpts[args.modality]
     # ckpt_path = osp.join(save_dir_ckpt, f"sparse_autoencoder_final.pt")
+    #ckpt_path = osp.join("./SAE_weights", f"sparse_autoencoder_final.pt")
 
-    ckpt_path = osp.join("./SAE_weights", f"sparse_autoencoder_final.pt")
+    ckpt_path = hf_hub_download(
+        repo_id=f"KKNakka/MammoSAE",
+        filename=f"sparse_autoencoder_final.pt",
+        repo_type="model"
+    )
+
 
     print(f"Loading SAE checkpoint from: {ckpt_path}")
     state_dict = torch.load(ckpt_path)
