@@ -7,9 +7,10 @@
 
 **Munich, Bavaria, Germany**
 
+[![paper](https://img.shields.io/badge/arXiv-Paper-blue.svg)](https://arxiv.org/abs/2507.15227)
+[![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://krishnakanthnakka.github.io/MammoSAE/)
+
 <h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
-
-
 
 
 ## 📣 Latest Updates
