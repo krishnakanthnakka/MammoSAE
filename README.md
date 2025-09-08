@@ -30,7 +30,6 @@
     pip install -r requirments.txt
     ```
 
-
 ---
 
 ### Checkpoints
@@ -52,7 +51,7 @@
 
     ```
 
-- **MammoCLIP:** Download the pretrained MammoCLIP checkpoints from Hugging Face and place them in the `Mammo_CLIP_weights/` directory.  
+- **MammoCLIP:** Download the pretrained MammoCLIP checkpoints from [Hugging Face](https://huggingface.co/shawn24/Mammo-CLIP) and place them in the `Mammo_CLIP_weights/` directory.  
 
 ---
 
