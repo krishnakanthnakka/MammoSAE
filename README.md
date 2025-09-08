@@ -68,9 +68,14 @@
 
 - The dataset folder should look like below:
 
-```
+    ```
+    ./datasets/
+    `-- VinDr
+        |-- README.md
+        |-- Images/
+        |-- vindr_detection_v1_folds.csv
 
-```
+    ```
 
 
 
