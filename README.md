@@ -113,6 +113,11 @@
   <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=2971_heatmap.png" width="80"/>
   <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=13093_heatmap.png" width="80"/>
   <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=2559_heatmap.png" width="80"/>
+  
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=11097_heatmap.png" width="80"/>
+  
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=14779_heatmap.png" width="80"/>
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=12632_heatmap.png" width="80"/>
 </p>
 
 
