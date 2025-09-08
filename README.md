@@ -14,8 +14,7 @@
 
 
 ## 📣 Latest Updates
-- **Sep 7-2025**: Partial Code Release. Working to update remaining parts of the code.
-
+- **Sep 7-2025**: Partial Code Release along with MammoSAE checkpoint. Working to update remaining parts of the code.
 
 ## 🔥 Highlights
 - **Mammo-SAE**:  First SAE trained on Mammogram Vision-Language Foundation Model (MammoCLIP) to interpret breast concepts such as mass, calcification.
@@ -137,7 +136,7 @@
 
 If you find this paper or repository useful, please consider staring 🌟 this repo and citing 📑 our paper:
 
-```
+```bibtex
 @article{nakka2025mammo,
   title={Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse Autoencoders},
   author={Nakka, Krishna Kanth},
