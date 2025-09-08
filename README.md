@@ -10,14 +10,16 @@
 <h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
 
 
+
+
 ## 📣 Latest Updates
 - **Sep 7-2025**: Partial Code Release. Working to update remaining parts of the code.
 
 
 ## 🔥 Highlights
-- **Mammo-SAE**:  First SAE trained on Mammogram Vision-Language Foundation Model to interpret breast concepts such as mass, calcification.
-- 
-
+- **Mammo-SAE**:  First SAE trained on Mammogram Vision-Language Foundation Model (MammoCLIP) to interpret breast concepts such as mass, calcification.
+- **Latent Neuron Intervention**: We localise highest activated latent neurons in the presence of breast concepts, and then conduct top-k group intervention to understand the performance on downstream concept prediction
+- **Breast Concept Localization**: We visualize the top-k latent neurons that are responsible for downstream performance and study their alignment with ground-truth regions to understand the model behaviour.
 
 
 ---
@@ -32,9 +34,9 @@
 
 ---
 
-### Checkpoints
+### Pretrained Checkpoints
 
-- **Sparse Autoencoder (SAE) Weights:** Pretrained SAE checkpoints are uploaded to the [Huggingface](https://huggingface.co/KKNakka/MammoSAE).  
+- **Sparse Autoencoder (SAE) Weights:** Pretrained SAE checkpoints are uploaded to the [Huggingface](https://huggingface.co/KKNakka/MammoSAE).  SAE is trained on the local features of the last layer of the Mammo-CLIP vision embeddings. 
 
     ```python
 
@@ -47,19 +49,26 @@
 
     print(f"Loading SAE checkpoint from: {ckpt_path}")
     state_dict = torch.load(ckpt_path)
-    autoencoder.load_state_dict(state_dict)
 
+    # load the weights into the SAE
+    autoencoder.load_state_dict(state_dict)
     ```
 
 - **MammoCLIP:** Download the pretrained MammoCLIP checkpoints from [Hugging Face](https://huggingface.co/shawn24/Mammo-CLIP) and place them in the `Mammo_CLIP_weights/` directory.  
-
 ---
 
+### VinDr Dataset
 
-### SAE Performance
+- We follow similar preprocessing pipeline and scripts from the [Mammo-CLIP](https://github.com/batmanlab/Mammo-CLIP) codebase. Please download all relevant dataset files such as annotations csv file and images. 
+
+- We download the VinDr dataset images from the Kaggle project. Please see [here](https://www.kaggle.com/datasets/shantanughosh/vindr-mammogram-dataset-dicom-to-png) for more details.
 
 
--  We reconstruct the local features at the last layer of the Mammo-CLIP backbone with SAE using
+### SAE Generalization
+
+- Our MammoSAE is trained on the local features of the `finetuned suspicious calcification` prediction model. To understand its effectivness in reconstructing other models (such as for different concept or for different training phase like pretrainign), we conduct the below experiment.
+
+-  We reconstruct the local features at the last layer of the Mammo-CLIP backbone with SAE for different models and concepts,  using
 
     ```sh
     bash scripts/eval_with_sae_reconstruction.sh
@@ -94,6 +103,19 @@
     bash scripts/visualizations.sh
     ```
 
+- The visualizations are stored in the `./results/visualizations` folder.  For example, given an image, we plot `top-10` latent neurons corresponding to presence of `suspicious calcification` class is shown below:
+
+<p align="center">
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=11097_heatmap.png" width="80"/>
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=11097_heatmap.png" width="80"/>
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=11097_heatmap.png" width="80"/>
+  <img src="results/visualization/Suspicious_Calcification_finetuned/visuals_mask_th=0.3/class=1/image_id=1026/neuron=11097_heatmap.png" width="80"/>
+</p>
+
+
+
+
+
 ## 📝 Citation
 
 If you find this paper or repository useful, please consider staring 🌟 this repo and citing 📑 our paper:
@@ -102,7 +124,7 @@ If you find this paper or repository useful, please consider staring 🌟 this r
 @article{nakka2025mammo,
   title={Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse Autoencoders},
   author={Nakka, Krishna Kanth},
-  journal={arXiv preprint arXiv:2507.15227},
+  journal={Deep Breast Imaging work, MICCAI 2025},
   year={2025}
 }
 ```
