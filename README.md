@@ -146,4 +146,4 @@ If you find this paper or repository useful, please consider staring 🌟 this r
 ```
 
 ## 🙏 Acknowledgement
-- This project is built upon [Mammo-CLIP](https://arxiv.org/abs/2405.12255) and [VisionSAE]() codebases. Thank you to both of them for open sourcing their codebases. 
+- This project is built upon [Mammo-CLIP](https://arxiv.org/abs/2405.12255) and [VisionSAE](https://github.com/neuroexplicit-saar/Discover-then-Name/) codebases. Thank you to both of them for open sourcing their codebases. 
