@@ -35,7 +35,7 @@
 
 ### Checkpoints
 
-- **Sparse Autoencoder (SAE):** Pretrained SAE checkpoints are included with this repository.  
+- **Sparse Autoencoder (SAE):** Pretrained SAE checkpoints are uploaded to the [Huggingface](https://huggingface.co/KKNakka/MammoSAE).  
 
     ```python
 
