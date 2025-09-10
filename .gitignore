@@ -4,3 +4,5 @@ __pycache__/
 copy.sh
 .DS_Store
 **/*@
+Mammo-CLIP_weights
+images_png
