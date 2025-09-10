@@ -214,13 +214,19 @@ def get_dataloader_RSNA(args, image_encoder_type, label, dataset, arch):
 
     # adjust the paths
     # borrowed as it is from Mammoclip paper
-    csv_file = "datasets/shantanughosh/vindr-mammogram-dataset-dicom-to-png/versions/1/vindr_detection_v1_folds.csv"
-    data_dir = "/workspace/datasets"
-    img_dir = "datasets/shantanughosh/vindr-mammogram-dataset-dicom-to-png/versions/1/images_png"
+    # data_dir = "/workspace/datasets"
+    # csv_file = "datasets/shantanughosh/vindr-mammogram-dataset-dicom-to-png/versions/1/vindr_detection_v1_folds.csv"
+    # img_dir = "datasets/shantanughosh/vindr-mammogram-dataset-dicom-to-png/versions/1/images_png"
+
+    csv_file = "vindr_detection_v1_folds.csv"
+    data_dir = "./datasets/VinDr"
+    img_dir = "images_png"
+
 
     mean = 0.3089279
     std = 0.25053555408335154
 
+    # load csv file
     df = pd.read_csv(os.path.join(data_dir, csv_file))
     df = df.fillna(0)
 
