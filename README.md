@@ -71,8 +71,7 @@
 
     ```sh
     ./datasets/
-    `-- VinDr
-        |-- README.md
+    |-- VinDr
         |-- images_png 
         |-- vindr_detection_v1_folds.csv
 
