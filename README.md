@@ -14,7 +14,8 @@
 
 
 ## 📣 Latest Updates
-- **Sep 7-2025**: Partial Code Release along with MammoSAE checkpoint. Working to update remaining parts of the code.
+- **Sep 10-2025**: Code Release along with MammoSAE checkpoint. 
+
 
 ## 🔥 Highlights
 - **Mammo-SAE**:  First SAE trained on Mammogram Vision-Language Foundation Model (MammoCLIP) to interpret breast concepts such as mass, calcification.
@@ -64,15 +65,15 @@
 
 - We follow similar preprocessing pipeline and scripts from the [Mammo-CLIP](https://github.com/batmanlab/Mammo-CLIP) codebase. We already provide the annotations csv file at `datasets/Vindr`. The CSV file is taken from Mammo-CLIP codebase.
 
-- We download the VinDr dataset images from the Kaggle project. Please see [here](https://www.kaggle.com/datasets/shantanughosh/vindr-mammogram-dataset-dicom-to-png) for more details. Please put the downloaded images to `datasets/Vindr/images`.
+- We download the VinDr dataset images from the Kaggle project. Please see [here](https://www.kaggle.com/datasets/shantanughosh/vindr-mammogram-dataset-dicom-to-png) for more details. Please put the downloaded images to `datasets/Vindr/images_png`.
 
 - The dataset folder should look like below:
 
-    ```
+    ```sh
     ./datasets/
     `-- VinDr
         |-- README.md
-        |-- Images/
+        |-- images_png 
         |-- vindr_detection_v1_folds.csv
 
     ```
