@@ -32,6 +32,10 @@
 - **Breast Concept Localization**: We visualize the top-k latent neurons that are responsible for downstream performance and study their alignment with ground-truth regions to understand the model behaviour.
 
 
+
+## 🔍Introduction
+
+
 <figure>
 <img src="assets/teaser.PNG">
 <figcaption align="center">
