@@ -9,12 +9,17 @@
 
 [![paper](https://img.shields.io/badge/arXiv-Paper-blue.svg)](https://arxiv.org/abs/2507.15227)
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://krishnakanthnakka.github.io/MammoSAE/)
+<a href="https://krishnakanthnakka.github.io/data/P2_Krishna_Kanth_Nakka_Mammo-SAE_Poster.pdf">
+<img src="https://img.shields.io/badge/Poster-View-2563EB" />
+</a>
 
 <h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
 
 
+
 ## 📣 Latest Updates
-- **Sep 10-2025**: Code Release along with MammoSAE checkpoint. 
+- ✅ **Sep 10-2025**: Code Release along with MammoSAE checkpoint. 
+- ⬛ Upload training code for SAEs
 
 
 ## 🔥 Highlights
@@ -25,7 +30,7 @@
 
 ---
 
-### Installation
+### 🛠️ Installation
 
 -  To install all required dependencies, run:
 
