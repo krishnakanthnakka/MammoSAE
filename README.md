@@ -22,10 +22,25 @@
 - ⬛ Upload training code for SAEs
 
 
+
+
+
+
 ## 🔥 Highlights
 - **Mammo-SAE**:  First SAE trained on Mammogram Vision-Language Foundation Model (MammoCLIP) to interpret breast concepts such as mass, calcification.
 - **Latent Neuron Intervention**: We localise highest activated latent neurons in the presence of breast concepts, and then conduct top-k group intervention to understand the performance on downstream concept prediction
 - **Breast Concept Localization**: We visualize the top-k latent neurons that are responsible for downstream performance and study their alignment with ground-truth regions to understand the model behaviour.
+
+
+<figure>
+<img src="assets/teaser.PNG">
+<figcaption align="center">
+<b>Overview of Mammo-SAE. </b>
+The SAE is first trained on patch-level CLIP features 
+<code>x<sub>j</sub> ∈ ℝ<sup>d</sup></code> at any given layer, projecting them into a high-dimensional, interpretable sparse latent space 
+<code>z ∈ ℝ<sup>h</sup></code>, and decoding them back for reconstruction. Once trained, the SAE is used to analyze which latent neurons are activated and what semantic information they encode. We also perform targeted interventions in the latent neuron space to assess their influence on downstream label prediction. We observe the learned latents capture diverse regions such as <i>nipple regions, masses</i>, and background areas. Red boxes indicate ground-truth mass localization.
+</figcaption>
+</figure>
 
 
 ---
