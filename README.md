@@ -1,5 +1,5 @@
 
-<h2 align="center"> Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse Autoencoders [Deep Breast Imaging Workshop, MICCAI 2025 🔥]</h2>
+<h2 align="center"> 🎗️ Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse Autoencoders [Deep Breast Imaging Workshop, MICCAI 2025 🔥]</h2>
 
 ![](https://i.imgur.com/waxVImv.png)
 
@@ -84,6 +84,7 @@
     ```
 
 
+---
 
 
 
@@ -97,12 +98,14 @@
     bash scripts/eval_with_sae_reconstruction.sh
     ```
 
+---
 
-### Launch Intervention on Mammo-SAE Latent Neurons
+
+### 🩺 Launch Intervention on Mammo-SAE Latent Neurons
 
 - We provide scripts to reproduce Figure 2 using the commands below. 
 
-#### Intervention: Top-k Latent Class-level  Neurons Activated
+#### 🎯 Intervention: Top-k Latent Class-level  Neurons Activated
 
 - To launch an intervention that activates only the `top-k` neurons, run:
 
@@ -111,14 +114,16 @@
     ```
 
 
-#### Intervention: Top-k Class-level Latent Neurons Deactivated
+#### 🎯 Intervention: Top-k Class-level Latent Neurons Deactivated
 
 - To launch an intervention that deactivates only the top-k neurons, run:
     ```sh
     bash scripts/topk_deactivate_latent_neuron_interventions.sh
     ```
+---
 
-### Visualization of Mammo-SAE Latent Neurons
+
+### 🔬 Visualization of Mammo-SAE Latent Neurons
 
 - To visualize the top-k latent neurons, please run:
 
