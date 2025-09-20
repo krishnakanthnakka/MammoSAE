@@ -18,7 +18,7 @@
 
 
 ## 📣 Latest Updates
-- ✅ **Sep 10-2025**: Code Release along with MammoSAE checkpoint. 
+- ✅ **Sep 10-2025**: Code Release along with MammoSAE checkpoint along with inference time intervention scripts.
 - ⬛ Upload training code for SAEs
 
 
