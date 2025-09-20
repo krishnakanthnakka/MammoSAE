@@ -87,7 +87,7 @@
 
 
 
-### Mammo-SAE Generalization
+### ✨ Mammo-SAE Generalization
 
 - Our MammoSAE is trained on the local features of the `finetuned:suspicious calcification` prediction model. To understand its effectivness in reconstructing other models (such as for different concept (eg., `mass`) or for different training phase like `pretraining`), we conduct the below experiment.
 
