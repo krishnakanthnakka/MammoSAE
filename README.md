@@ -75,10 +75,11 @@
 - The dataset folder should look like below:
 
     ```sh
-    ./datasets/
-    |-- VinDr
-        |-- images_png 
-        |-- vindr_detection_v1_folds.csv
+    datasets
+    |--- VinDr
+    |   |--- images_png
+    |   |--- README.md
+    |   |--- vindr_detection_v1_folds.csv
 
     ```
 
