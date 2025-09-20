@@ -41,7 +41,7 @@
 
 ---
 
-### Pretrained Checkpoints
+###  📦  Pretrained Checkpoints
 
 - **Sparse Autoencoder (SAE) Weights:** Pretrained SAE checkpoints are uploaded to the [Huggingface](https://huggingface.co/KKNakka/MammoSAE).  SAE is trained on the local features of the last layer of the Mammo-CLIP vision embeddings. 
 
@@ -66,7 +66,7 @@
 ---
 
 
-### VinDr Dataset
+### 📁 VinDr Dataset
 
 - We follow similar preprocessing pipeline and scripts from the [Mammo-CLIP](https://github.com/batmanlab/Mammo-CLIP) codebase. We already provide the annotations csv file at `datasets/Vindr`. The CSV file is taken from Mammo-CLIP codebase.
 
