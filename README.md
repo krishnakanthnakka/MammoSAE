@@ -13,7 +13,7 @@
 <img src="https://img.shields.io/badge/Poster-View-2563EB" />
 </a>
 
-<h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
+<h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update. Every star keeps us motivated to explore.</h5>
 
 
 
