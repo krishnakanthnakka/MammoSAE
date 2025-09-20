@@ -58,6 +58,13 @@ The SAE is first trained on patch-level CLIP features
     source envs.sh
     ```
 
+-  Basic Dependencies:
+
+    ```
+    - CUDA Version >= 12.8
+    - Python >= 3.8
+    - Pytorch >= 2.8.0
+    ```
 ---
 
 ###  📦  Pretrained Checkpoints
