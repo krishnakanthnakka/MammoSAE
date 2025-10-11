@@ -187,6 +187,39 @@ The SAE is first trained on patch-level CLIP features
 
 
 
+### SAE Training
+
+
+- We first obtain the embeddings the target model and save them to the disk using the script
+
+
+    ```sh
+    bash scripts/save_base_embeddings.sh
+    ```
+
+
+-  We then train the SAE using the script 
+
+    ```sh
+    bash scripts/train_sae.sh
+    ```
+
+### Class-Level Top Latent
+
+- First, we compute the latent embeddings in SAE space using the script
+
+    ```sh
+    bash scripts/save_sae_concept_strengths_global.sh
+    ```
+
+- After that, we compute the top-activated latents aggregated over all images using the script below:
+
+    ```sh
+    bash scripts/get_top_class_level_concepts.sh
+    ```
+
+
+
 ## 📝 Citation
 
 If you find this paper or repository useful, please consider staring 🌟 this repo and citing 📑 our paper:
