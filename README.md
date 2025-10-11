@@ -235,7 +235,7 @@ If you find this paper or repository useful, please consider staring 🌟 this r
 @article{nakka2025mammo,
   title={Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse Autoencoders},
   author={Nakka, Krishna Kanth},
-  journal={Deep Breast Imaging work, MICCAI 2025},
+  journal={Deep Breath workshop, MICCAI 2025},
   year={2025}
 }
 ```
