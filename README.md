@@ -187,7 +187,7 @@ The SAE is first trained on patch-level CLIP features
 
 
 
-### SAE Training
+### ⚙️ SAE Training Pipeline
 
 
 - We first obtain the embeddings the target model and save them to the disk using the script
@@ -204,7 +204,7 @@ The SAE is first trained on patch-level CLIP features
     bash scripts/train_sae.sh
     ```
 
-### Class-Level Top Latent
+### 🔍 Class-Level Top Latent Neurons
 
 - First, we compute the latent embeddings in SAE space using the script
 
