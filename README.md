@@ -185,6 +185,7 @@ The SAE is first trained on patch-level CLIP features
 
 - We visualizaed the latent neurons that have `highest` activated aggregated over all class-level images. Future work could explore better ways to localize neurons positions that are interpretable and important for downstream prediction.
 
+---
 
 
 ### ⚙️ SAE Training Pipeline
@@ -204,6 +205,9 @@ The SAE is first trained on patch-level CLIP features
     bash scripts/train_sae.sh
     ```
 
+---
+
+
 ### 🔍 Class-Level Top Latent Neurons
 
 - First, we compute the latent embeddings in SAE space using the script
@@ -218,6 +222,7 @@ The SAE is first trained on patch-level CLIP features
     bash scripts/get_top_class_level_concepts.sh
     ```
 
+---
 
 
 ## 📝 Citation
