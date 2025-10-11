@@ -11,6 +11,8 @@
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://krishnakanthnakka.github.io/MammoSAE/)
 <a href="https://krishnakanthnakka.github.io/data/P2_Krishna_Kanth_Nakka_Mammo-SAE_Poster.pdf">
 <img src="https://img.shields.io/badge/Poster-View-2563EB" />
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-MammoSAE-FFD21E)](https://huggingface.co/KKNakka/MammoSAE)
+
 </a>
 
 <h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update. Every star keeps me motivated to explore.</h5>
