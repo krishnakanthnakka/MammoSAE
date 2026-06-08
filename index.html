@@ -134,10 +134,110 @@
   #gradio pre {
     background-color: transparent;
   }
+
+  /* ── Smooth scrolling & anchor offset ── */
+  html { scroll-behavior: smooth; }
+  [id] { scroll-margin-top: 3.5rem; }
+
+  /* ── Sticky navbar ── */
+  #site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0.6rem 1.5rem;
+  }
+  .site-nav-inner {
+    display: flex;
+    justify-content: center;
+    gap: 2.25rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  #site-nav a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #555;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    padding: 0.2rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-bottom-color 0.15s;
+  }
+  #site-nav a:hover {
+    color: #f68946;
+    border-bottom-color: #f68946;
+    text-decoration: none;
+  }
+
+  /* ── Inline code pill ── */
+  body code {
+    background: #f3f3f5;
+    color: #c0392b;
+    padding: 0.15em 0.45em;
+    border-radius: 4px;
+    font-size: 0.875em;
+    font-family: 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
+  }
+
+  /* ── Dark BibTeX block ── */
+  pre {
+    background: #1e1e2e !important;
+    color: #cdd6f4 !important;
+    border-radius: 10px !important;
+    padding: 1.5rem 2rem !important;
+    font-size: 0.875rem !important;
+    line-height: 1.65 !important;
+    overflow-x: auto;
+    border: none !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+  }
+  pre code {
+    background: transparent !important;
+    color: inherit !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    font-size: inherit !important;
+  }
+
+  /* ── Unified figure captions ── */
+  .fig-caption {
+    font-size: 0.925rem;
+    color: #555;
+    margin-top: 0.85rem;
+    line-height: 1.65;
+    text-align: left;
+  }
+  .fig-caption strong { color: #222; }
+
+  /* ── Panel sub-labels (visualization grid) ── */
+  .panel-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── Alternating viz section backgrounds ── */
+  .viz-alt { background-color: #f7f8fa; }
 </style>
 
 
 <body>
+
+  <nav id="site-nav">
+    <div class="site-nav-inner">
+      <a href="#highlights">Highlights</a>
+      <a href="#method">Method</a>
+      <a href="#experiments">Experiments</a>
+      <a href="#results">Results</a>
+      <a href="#BibTeX">Citation</a>
+    </div>
+  </nav>
 
   <section class="hero">
   <div class="hero-body">
@@ -149,7 +249,7 @@
           <h1 class="title is-2 publication-title" style="line-height: 1.25; margin-bottom: 0.5rem;">
             Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse AutoEncoders
           </h1>
-          <p class="is-size-5" style="color: #5a5a5a; margin-bottom: 1rem;">[DeepBreath, MICCAI 2025]</p>
+          <p class="is-size-5" style="color: #5a5a5a; margin-bottom: 1rem;">[DeepBreath Workshop, MICCAI 2025]</p>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -235,7 +335,7 @@
 
 
 
-<section class="section" style="background-color: #efeff081;"> <!-- efeff081 #e3f2fd; --> 
+<section id="highlights" class="section" style="background-color: #efeff081;">
   <div class="container is-max-desktop">
     <!-- Highlights -->
     <div class="columns is-centered has-text-centered">
@@ -274,7 +374,7 @@
   </div>
 </section>
 
-<section class="section" style="background-color: #fdfdfd;">  <!-- #f3f3f3; f9fafb ededed  fdfdfd  -->
+<section id="method" class="section" style="background-color: #fdfdfd;">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
@@ -372,7 +472,7 @@
 
 
 
-<section class="section">
+<section id="experiments" class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
@@ -410,7 +510,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<section id="results" class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
 
@@ -453,8 +553,8 @@
         </div>
 
         <!-- Main figure caption -->
-        <figcaption style="margin-top: 15px; font-size: 1em; text-align: left;">
-          <b>Figure:</b> Group interventions on class-level latent neurons. Left: Top-k activated intervention—only the top-k class-specific neurons are retained, and all others are zeroed out. Right: Top-k deactivated intervention—the top-k neurons are zeroed out while the rest remain unchanged. We observe that as few as 10 neurons can significantly affect downstream predictions, highlighting their relevance.
+        <figcaption class="fig-caption">
+          <strong>Figure:</strong> Group interventions on class-level latent neurons. Left: Top-k activated intervention—only the top-k class-specific neurons are retained, and all others are zeroed out. Right: Top-k deactivated intervention—the top-k neurons are zeroed out while the rest remain unchanged. We observe that as few as 10 neurons can significantly affect downstream predictions, highlighting their relevance.
         </figcaption>
       </figure>
 
@@ -481,8 +581,8 @@
       </p>
 
       <!-- Caption above image -->
-      <p style="font-size: 1em; color: #555; margin-bottom: 10px; text-align: left;">
-        <b>Figure:</b> Mean Average Precision (mAP) for breast concept localization using the
+      <p class="fig-caption" style="margin-top: 0; margin-bottom: 10px;">
+        <strong>Figure:</strong> Mean Average Precision (mAP) for breast concept localization using the
         top-10 class-level latent neuron activations for class <em>c</em> = 1 across different settings.
       </p>
 
@@ -518,10 +618,7 @@
 
       </p>
 
-      <!-- Caption above image -->
-      <h2 class="subtitle has-text-centered" style="margin-bottom: 10px; font-weight: bold;">
-        Visualization of class-level latent neurons for Finetuned (Suspicious Calcification) model
-      </h2>
+      <p class="panel-label">Visualization of class-level latent neurons — Finetuned (Suspicious Calcification)</p>
 
       <!-- Image -->
       <div style="text-align: center;">
@@ -537,14 +634,11 @@
 
 
 
-<section class="hero teaser">
+<section class="hero teaser viz-alt">
   <div class="container is-max-desktop">
     <div class="hero-body" style="text-align: center;">
 
-      <!-- Caption Above Image -->
-      <h2 class="subtitle has-text-centered" style="margin-bottom: 10px; font-weight: bold;">
-        Visualization of class-level latent neurons for Finetuned (Mass) model
-      </h2>
+      <p class="panel-label">Visualization of class-level latent neurons — Finetuned (Mass)</p>
 
       <!-- Image -->
       <img src="./images/media/latent_visualization_Mass_finetuned_new.png" 
@@ -560,10 +654,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body" style="text-align: center;">
 
-      <!-- Caption Above Image -->
-      <h2 class="subtitle has-text-centered" style="margin-bottom: 10px; font-weight: bold;">
-        Visualization of class-level latent neurons for Pretrained (Suspicious Calcification) model
-      </h2>
+      <p class="panel-label">Visualization of class-level latent neurons — Pretrained (Suspicious Calcification)</p>
 
       <!-- Image -->
       <img src="./images/media/latent_visualization_Suspicious_Calcification_pretrained_new.png" 
@@ -575,14 +666,11 @@
 </section>
 
 
-<section class="hero teaser">
+<section class="hero teaser viz-alt">
   <div class="container is-max-desktop">
     <div class="hero-body" style="text-align: center;">
 
-      <!-- Caption Above Image -->
-      <h2 class="subtitle has-text-centered" style="margin-bottom: 10px; font-weight: bold;">
-        Visualization of class-level latent neurons for Pretrained (Mass) model
-      </h2>
+      <p class="panel-label">Visualization of class-level latent neurons — Pretrained (Mass)</p>
 
       <!-- Image -->
       <img src="./images/media/latent_visualization_Mass_pretrained_new.png" 
@@ -614,9 +702,9 @@
       </p>
 
       <!-- Caption above image -->
-      <p style="font-size: 1em; color: #555; margin-bottom: 10px; text-align: left;">
-        <b>Figure:</b> Mean latent activation vectors for each class (<em>c</em> = 1 indicates 
-        the presence of the concept) in the pretrained model (left) and fine-tuned model 
+      <p class="fig-caption" style="margin-top: 0; margin-bottom: 10px;">
+        <strong>Figure:</strong> Mean latent activation vectors for each class (<em>c</em> = 1 indicates
+        the presence of the concept) in the pretrained model (left) and fine-tuned model
         (right) for the suspicious calcification concept.
       </p>
 
