@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MammoSAE</title>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Google+Sans|Noto+Sans|Castoro&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -24,9 +24,36 @@
 </head>
 
 <style>
-    .section {
-    margin-bottom: -30px; /* Adjust this value as needed to reduce the space */
+  /* ── Base typography ── */
+  body {
+    font-family: 'Inter', 'Google Sans', 'Noto Sans', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.75;
   }
+
+  h1, h2, h3, h4, h5, h6,
+  .title, .subtitle {
+    font-family: 'Inter', 'Google Sans', sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  /* ── Section spacing ── */
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  section.hero.teaser .hero-body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  /* ── List spacing (replaces <br> hacks) ── */
+  .content ol > li + li,
+  .content ul > li + li {
+    margin-top: 1rem;
+  }
+
   .expandable-card .card-text-container {
     max-height: 200px;
     overflow-y: hidden;
@@ -112,7 +139,6 @@
 
 <body>
 
-
   <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -120,20 +146,10 @@
         <div class="column has-text-centered">
           <img src="images/breasticon.png" alt="MammoSAE" width="100" style="margin-bottom: 1rem;">
           
-          <h1 class="title is-1 publication-title">
-            Mammo-SAE: 
-            <span class="is-size-2">
-              <span class="is-size-1">I</span>nterpreting 
-              <span class="is-size-1">B</span>reast 
-              <span class="is-size-1">C</span>ancer 
-              <span class="is-size-1">C</span>oncept 
-              <span class="is-size-1">L</span>earning with 
-              <span class="is-size-1">S</span>parse 
-              <span class="is-size-1">A</span>utoEncoders
-            </span>
-            <br>
-            <span class="is-size-4" style="color: #5a5a5a; font-weight: normal;">[DeepBreath, MICCAI 2025]</span>
+          <h1 class="title is-2 publication-title" style="line-height: 1.25; margin-bottom: 0.5rem;">
+            Mammo-SAE: Interpreting Breast Cancer Concept Learning with Sparse AutoEncoders
           </h1>
+          <p class="is-size-5" style="color: #5a5a5a; margin-bottom: 1rem;">[DeepBreath, MICCAI 2025]</p>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -178,6 +194,11 @@
 
             </div>
           </div>
+
+          <div style="background-color: #fff8e1; border: 2px solid #f9a825; padding: 14px 24px; margin: 20px auto 0; border-radius: 8px; font-size: 0.95rem; max-width: 680px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;">
+            <strong>Collaboration:</strong> If you are interested in collaborating on breast cancer interpretability research, please write to me at <a href="mailto:krishkanth.92@gmail.com">krishkanth.92@gmail.com</a>.
+          </div>
+
           </div>
       </div>
     </div>
@@ -230,16 +251,14 @@
   that are human-interpretable. It first identifies highly activated latent neurons 
   and then conducts interventions to understand their causal effects.
 </li>
-<br>
 <li>
-  <b>Mammo-SAE Framework.</b> 
+  <b>Mammo-SAE Framework.</b>
   Our framework projects patch-level CLIP features into a high-dimensional sparse latent space 
   designed for human interpretability. We identify monosemantic latent neurons whose activations 
   align with meaningful breast cancer features such as masses and calcifications by finding 
   the most highly activated neurons. We then perform targeted interventions to test how 
   these neurons affect label predictions by selectively activating or deactivating groups of neurons.
 </li>
-<br>
 <li>
   <b>Extensive Evaluation.</b> 
   We visualize spatial activations of top-activated latent neurons, showing that they frequently 
@@ -262,10 +281,11 @@
         <h2 class="title is-3 has-text-centered">🧠 Mammo-SAE Method Overview</h2>
         <div class="content has-text-justified">  <!--  style="font-size: 1.05em;" -->
 
-          <b>Step 1: Feature Extraction</b>
-          
+          <p><strong>Step 1: Feature Extraction</strong></p>
+          <p>
             Given an input image <strong>I</strong>, we extract local features from a pretrained Mammo-CLIP model at a specific layer <strong>l</strong>. Each spatial position <strong>j</strong> in the feature map yields a vector <strong>x<sub>l</sub><sup>j</sup> ∈ ℝ<sup>d</sup></strong>, where <strong>d</strong> is the feature dimension and <strong>N<sub>l</sub> = H<sub>l</sub> × W<sub>l</sub></strong> is the number of spatial locations.
-          
+          </p>
+
 
           <p><strong>Step 2: Sparse Autoencoder Training</strong></p>
           <p>
@@ -327,7 +347,6 @@
              </p>
 
             </li>
-            <br>
             <li>
               <strong>Top-k Deactivated:</strong> Suppress the top-k neurons:
               <!-- <p style="font-family: monospace;">
@@ -389,15 +408,6 @@
       </div>
     </div>
   </div>
-</section>
-
-
-
-
-</div>
-</div>
-</div>
-</div>
 </section>
 
 <section class="hero teaser">
